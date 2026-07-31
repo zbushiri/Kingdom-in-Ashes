@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi1mvvomaw74d"
-path="res://.godot/imported/NorthQueen.png-de8aa07c180b56d97b5ca9382901772f.ctex"
+uid="uid://cy3gdtb5cryhe"
+path="res://.godot/imported/MC.png-820ee5fb35a0ec2976a7b3763d240b1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/NorthQueen.png"
-dest_files=["res://.godot/imported/NorthQueen.png-de8aa07c180b56d97b5ca9382901772f.ctex"]
+source_file="res://Assets/Sprites/MC.png"
+dest_files=["res://.godot/imported/MC.png-820ee5fb35a0ec2976a7b3763d240b1a.ctex"]
 
 [params]
 
