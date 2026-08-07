@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://civj7sn3paccl"]
+
+[ext_resource type="Script" uid="uid://hajqpsq1ky18" path="res://Assets/Scripts/npc.gd" id="1_peea3"]
+[ext_resource type="Texture2D" uid="uid://dg667vh2di4tq" path="res://Assets/Sprites/ladybugNPC.png" id="2_7a58h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3owmv"]
+radius = 7.0
+height = 18.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=82522910]
+collision_layer = 4
+script = ExtResource("1_peea3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=397106260]
+texture = ExtResource("2_7a58h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=731790305]
+shape = SubResource("CapsuleShape2D_3owmv")
