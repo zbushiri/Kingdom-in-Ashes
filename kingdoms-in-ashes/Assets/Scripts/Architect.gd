@@ -24,6 +24,10 @@ func _physics_process(delta):
 	if abs(global_position.x - start_position.x) > patrol_distance:
 		direction *= -1
 	
+	# Play walk animation
+	if has_node("Sprite2D"):
+		$AnimationPlayer.play("move")
+	
 	# Face direction
 	if has_node("Sprite2D"):
 		$Sprite2D.flip_h = (direction < 0)

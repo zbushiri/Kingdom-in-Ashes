@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy3gdtb5cryhe"
-path="res://.godot/imported/MC.png-820ee5fb35a0ec2976a7b3763d240b1a.ctex"
+uid="uid://crr5schwsteuq"
+path="res://.godot/imported/The_Architect.png-02e52b34b39bf600d42c39e0d58b1380.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/MC.png"
-dest_files=["res://.godot/imported/MC.png-820ee5fb35a0ec2976a7b3763d240b1a.ctex"]
+source_file="res://Assets/Sprites/The_Architect.png"
+dest_files=["res://.godot/imported/The_Architect.png-02e52b34b39bf600d42c39e0d58b1380.ctex"]
 
 [params]
 

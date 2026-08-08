@@ -57,6 +57,9 @@ move_down={
 2d_render/layer_1="player"
 2d_render/layer_9="ground"
 2d_render/layer_10="jump_through"
+2d_physics/layer_1="solidBlocks"
+2d_physics/layer_2="passthroughBlocks"
+2d_physics/layer_3="npc"
 
 [physics]
 

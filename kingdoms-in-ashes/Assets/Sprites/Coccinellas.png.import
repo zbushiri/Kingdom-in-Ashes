@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg667vh2di4tq"
-path="res://.godot/imported/ladybugNPC.png-84d9d96704d2de80d48cfe6ab7dd5837.ctex"
+uid="uid://dkg50ikj8238u"
+path="res://.godot/imported/Coccinellas.png-2f0783b9ae7251941eeb449d023d58e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/ladybugNPC.png"
-dest_files=["res://.godot/imported/ladybugNPC.png-84d9d96704d2de80d48cfe6ab7dd5837.ctex"]
+source_file="res://Assets/Sprites/Coccinellas.png"
+dest_files=["res://.godot/imported/Coccinellas.png-2f0783b9ae7251941eeb449d023d58e7.ctex"]
 
 [params]
 

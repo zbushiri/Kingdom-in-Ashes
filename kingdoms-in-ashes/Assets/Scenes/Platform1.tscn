@@ -12,7 +12,7 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3owmv"]
 size = Vector2(32, 7)
 
-[node name="movingPlatformLarge" type="Path2D" unique_id=337798366 node_paths=PackedStringArray("path_follow_2D")]
+[node name="Platform1" type="Path2D" unique_id=337798366 node_paths=PackedStringArray("path_follow_2D")]
 curve = SubResource("Curve2D_xqbkt")
 script = ExtResource("1_e5y38")
 path_time = 2.0
