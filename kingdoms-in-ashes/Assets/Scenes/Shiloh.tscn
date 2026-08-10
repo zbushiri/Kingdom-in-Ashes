@@ -93,7 +93,8 @@ autoplay = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=384641477]
 offset = Vector2(0, -15)
-zoom = Vector2(6, 6)
+zoom = Vector2(7, 7)
+position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=596296410]
 position = Vector2(-2, -5)
