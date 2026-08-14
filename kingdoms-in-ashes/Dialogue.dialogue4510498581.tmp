@@ -1,0 +1,37 @@
+~ act_1
+Coccinella1: We guard the threshold of iron and bone. Listen closely, traveler, for the beast below keeps the first secret.
+Coccinella2: It has no throat, yet it answers when called. Remember this when you stand before the dark.
+Coccinella3: It lives where the stone is coldest. It mimics the breath of the lost.
+Coccinella4: Do not trust the silence of the lower tier; the guardian's voice is made of air and repetition.
+Coccinella5: Take these pieces we give you, human, and piece them together before the gatekeeper demands his toll.
+Isolde: You think you're the master of this realm just because you walk upright? Answer this before I tear you apart:
+Isolde: I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?
+- A ghost.
+	Isolde: Wrong. A ghost has no need for wind, fool.
+	=> ask_again
+- The wind itself.
+	Isolde: Close, but no. The wind carries me, it is not me.
+	=> ask_again
+- A whisper.
+	ACT I MONSTER: A whisper needs a mouth to start it. Think again.
+	=> ask_again
+- An echo.
+	Shiloh: An echo.
+	ACT I MONSTER: ...Correct. You may pass, for now.
+	=> END
+
+~ ask_again
+Isolde: Try again, traveler. I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?
+- A ghost.
+	Isolde: Wrong. A ghost has no need for wind, fool.
+	=> ask_again
+- The wind itself.
+	Isolde: Close, but no. The wind carries me, it is not me.
+	=> ask_again
+- A whisper.
+	Isolde: A whisper needs a mouth to start it. Think again.
+	=> ask_again
+- An echo.
+	Shiloh: An echo.
+	Isolde: ...Correct. You may pass, for now.
+	=> END

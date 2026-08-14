@@ -6,8 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b8vtcpladvvvg" path="res://Assets/Scenes/Platform1.tscn" id="3_8wi1m"]
 [ext_resource type="PackedScene" uid="uid://b1ypq4nxw3tn3" path="res://Assets/Scenes/Architect.tscn" id="4_ql8qi"]
 [ext_resource type="PackedScene" uid="uid://cswwxubmq6kbe" path="res://Assets/Scenes/Coccinellas.tscn" id="5_7fk0h"]
+[ext_resource type="Script" uid="uid://camsssrx6y4f" path="res://Assets/Scenes/shiloh.gd" id="5_7lgy5"]
 [ext_resource type="AudioStream" uid="uid://bnx6ntp0qxqb6" path="res://Assets/Audio/paulyudin-background-background-music-574010.ogg" id="6_msn23"]
+[ext_resource type="Texture2D" uid="uid://d2vbvlglj780f" path="res://Shiloh.png" id="6_pnluw"]
+[ext_resource type="Script" uid="uid://brdou8an4o0ev" path="res://Assets/Scenes/Areas/interaction_area.gd" id="7_0ufq0"]
 [ext_resource type="Script" uid="uid://bo1347eu3rv8v" path="res://Assets/Scripts/background_music.gd" id="7_f20k6"]
+[ext_resource type="Resource" uid="uid://c72xgjhs080pd" path="res://Dialogue.dialogue" id="8_u1wc8"]
 
 [sub_resource type="Curve2D" id="Curve2D_8wi1m"]
 _data = {
@@ -1258,6 +1262,44 @@ terrain_set_0/terrain_1/name = "solid"
 terrain_set_0/terrain_1/color = Color(0.972549, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_f20k6")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rwvx"]
+atlas = ExtResource("6_pnluw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl8b6"]
+atlas = ExtResource("6_pnluw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fldpj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rwvx")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl8b6")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5rft"]
+radius = 10.198039
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fldpj"]
+radius = 28.160255
+
 [sub_resource type="Environment" id="Environment_3owmv"]
 background_mode = 3
 tonemap_mode = 1
@@ -1274,7 +1316,7 @@ fog_height_density = 3.4286
 
 [node name="backdrop" type="Sprite2D" parent="." unique_id=1800466574]
 z_index = -1
-position = Vector2(4486, -836)
+position = Vector2(4561, -740)
 scale = Vector2(4.7968745, 1.700926)
 texture = ExtResource("1_f20k6")
 
@@ -1314,16 +1356,58 @@ tile_set = SubResource("TileSet_0ufq0")
 
 [node name="Shiloh" parent="Characters" unique_id=1531094566 instance=ExtResource("2_3uyhe")]
 z_index = 1
-position = Vector2(0, -3)
+position = Vector2(-10, -1)
 platform_on_leave = 2
+script = ExtResource("5_7lgy5")
+speed = 10.0
+jump_power = 7.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters/Shiloh" unique_id=1031684650]
+position = Vector2(32, 1)
+sprite_frames = SubResource("SpriteFrames_fldpj")
+animation = &"move"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Characters/Shiloh" unique_id=1781608541]
+light_mask = 131
+visibility_layer = 4
+position = Vector2(-2, -5)
+shape = SubResource("CircleShape2D_a5rft")
 
 [node name="Architect" parent="Characters" unique_id=204602805 instance=ExtResource("4_ql8qi")]
-position = Vector2(-21, -8)
+position = Vector2(8072, 57)
 
 [node name="Ladybugs" type="Node" parent="Characters" unique_id=95977712]
 
 [node name="Coccinella1" parent="Characters/Ladybugs" unique_id=1950215105 instance=ExtResource("5_7fk0h")]
 position = Vector2(323, -11)
+collision_layer = 4
+collision_mask = 3
+
+[node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella1" unique_id=119811220]
+collision_layer = 128
+collision_mask = 7
+script = ExtResource("7_0ufq0")
+dialogue_resource = ExtResource("8_u1wc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella1/InteractionArea" unique_id=1217331470]
+light_mask = 135
+visibility_layer = 128
+shape = SubResource("CircleShape2D_fldpj")
+
+[node name="Coccinella2" parent="Characters/Ladybugs" unique_id=1192013031 instance=ExtResource("5_7fk0h")]
+position = Vector2(500, -583)
+collision_layer = 4
+
+[node name="Coccinella3" parent="Characters/Ladybugs" unique_id=649720104 instance=ExtResource("5_7fk0h")]
+position = Vector2(1517, -1339)
+collision_layer = 4
+
+[node name="Coccinella4" parent="Characters/Ladybugs" unique_id=429445557 instance=ExtResource("5_7fk0h")]
+position = Vector2(2615, -1123)
+collision_layer = 4
+
+[node name="Coccinella5" parent="Characters/Ladybugs" unique_id=231992489 instance=ExtResource("5_7fk0h")]
+position = Vector2(4752, -862)
 collision_layer = 4
 
 [node name="Audio" type="Node" parent="." unique_id=970587612]

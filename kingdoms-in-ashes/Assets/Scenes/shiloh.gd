@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name PlayerController
 
 @export var speed = 10.0
 @export var jump_power = 10.0
@@ -14,7 +14,12 @@ func _input(event):
 	# Handle jump.
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
-		
+	# Handle jump down
+	if event.is_action_pressed("move_down") and is_on_floor():
+		set_collision_mask_value(2, false)  # Disable Layer 2 collision
+		await get_tree().create_timer(0.2).timeout
+		set_collision_mask_value(2, true)   # Re-enable Layer 2 collision
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
