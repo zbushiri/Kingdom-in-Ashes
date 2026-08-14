@@ -1295,7 +1295,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a5rft"]
-radius = 10.198039
+radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fldpj"]
 radius = 28.160255
@@ -1379,19 +1379,20 @@ position = Vector2(8072, 57)
 [node name="Ladybugs" type="Node" parent="Characters" unique_id=95977712]
 
 [node name="Coccinella1" parent="Characters/Ladybugs" unique_id=1950215105 instance=ExtResource("5_7fk0h")]
-position = Vector2(924, -120)
+position = Vector2(538, -7)
 collision_layer = 4
 collision_mask = 3
 
 [node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella1" unique_id=119811220]
-collision_layer = 128
+position = Vector2(0, 1)
+collision_layer = 132
 collision_mask = 7
 script = ExtResource("7_0ufq0")
 dialogue_resource = ExtResource("8_u1wc8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella1/InteractionArea" unique_id=1217331470]
 light_mask = 135
-visibility_layer = 128
+visibility_layer = 132
 shape = SubResource("CircleShape2D_fldpj")
 
 [node name="Coccinella2" parent="Characters/Ladybugs" unique_id=1192013031 instance=ExtResource("5_7fk0h")]
