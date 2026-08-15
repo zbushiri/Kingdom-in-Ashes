@@ -20,4 +20,11 @@ func _on_body_exited(body):
 
 func _unhandled_input(event):
 	if player_in_range and event.is_action_pressed("ui_accept"):
+		# Pause only Tiles, movingTiles, and Characters
+		get_tree().root.get_node("Area1/Tiles").process_mode = Node.PROCESS_MODE_DISABLED
+		get_tree().root.get_node("Area1/movingTiles").process_mode = Node.PROCESS_MODE_DISABLED
+		get_tree().root.get_node("Area1/Characters").process_mode = Node.PROCESS_MODE_DISABLED
+		
 		DialogueManager.show_dialogue_balloon(dialogue_resource, start_title)
+		
+	
