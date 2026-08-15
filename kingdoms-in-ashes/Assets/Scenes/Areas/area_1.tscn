@@ -1316,7 +1316,7 @@ fog_height_density = 3.4286
 
 [node name="backdrop" type="Sprite2D" parent="." unique_id=1800466574]
 z_index = -1
-position = Vector2(4561, -740)
+position = Vector2(4473, -744)
 scale = Vector2(4.7968745, 1.700926)
 texture = ExtResource("1_f20k6")
 
@@ -1400,17 +1400,69 @@ shape = SubResource("CircleShape2D_fldpj")
 position = Vector2(500, -583)
 collision_layer = 4
 
+[node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella2" unique_id=295118321]
+position = Vector2(0, 1)
+disable_mode = 2
+collision_layer = 132
+collision_mask = 7
+script = ExtResource("7_0ufq0")
+dialogue_resource = ExtResource("8_u1wc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella2/InteractionArea" unique_id=801360292]
+light_mask = 135
+visibility_layer = 132
+shape = SubResource("CircleShape2D_fldpj")
+
 [node name="Coccinella3" parent="Characters/Ladybugs" unique_id=649720104 instance=ExtResource("5_7fk0h")]
 position = Vector2(1517, -1339)
 collision_layer = 4
+
+[node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella3" unique_id=230199449]
+position = Vector2(0, 1)
+disable_mode = 2
+collision_layer = 132
+collision_mask = 7
+script = ExtResource("7_0ufq0")
+dialogue_resource = ExtResource("8_u1wc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella3/InteractionArea" unique_id=1976558896]
+light_mask = 135
+visibility_layer = 132
+shape = SubResource("CircleShape2D_fldpj")
 
 [node name="Coccinella4" parent="Characters/Ladybugs" unique_id=429445557 instance=ExtResource("5_7fk0h")]
 position = Vector2(2615, -1123)
 collision_layer = 4
 
+[node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella4" unique_id=59481495]
+position = Vector2(0, 1)
+disable_mode = 2
+collision_layer = 132
+collision_mask = 7
+script = ExtResource("7_0ufq0")
+dialogue_resource = ExtResource("8_u1wc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella4/InteractionArea" unique_id=10061217]
+light_mask = 135
+visibility_layer = 132
+shape = SubResource("CircleShape2D_fldpj")
+
 [node name="Coccinella5" parent="Characters/Ladybugs" unique_id=231992489 instance=ExtResource("5_7fk0h")]
 position = Vector2(4752, -862)
 collision_layer = 4
+
+[node name="InteractionArea" type="Area2D" parent="Characters/Ladybugs/Coccinella5" unique_id=1416638334]
+position = Vector2(0, 1)
+disable_mode = 2
+collision_layer = 132
+collision_mask = 7
+script = ExtResource("7_0ufq0")
+dialogue_resource = ExtResource("8_u1wc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Ladybugs/Coccinella5/InteractionArea" unique_id=844351342]
+light_mask = 135
+visibility_layer = 132
+shape = SubResource("CircleShape2D_fldpj")
 
 [node name="Audio" type="Node" parent="." unique_id=970587612]
 
